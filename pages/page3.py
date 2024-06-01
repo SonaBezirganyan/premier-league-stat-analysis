@@ -91,7 +91,6 @@ def update_graph(feature):
         fig.update_layout(height=1000, width=1300, title_text="Top 10 Attacking Statistics")
         return fig
     else:
-        # defending
         df_sorted_tackles = df.sort_values(by='Tackles', ascending=False).head(10)
         df_sorted_tackle_success = df.sort_values(by='Tackle success %', ascending=False).head(10)
         df_non_goalkeepers = df[df['Position'] != 'Goalkeeper']
